@@ -21,5 +21,6 @@
         </Border>
         <Button Content="Button" HorizontalAlignment="Left" Margin="677,115,0,0" VerticalAlignment="Top" Width="100"/>
         <Label x:Name="lblTotal" Content="..." HorizontalAlignment="Left" Margin="369,49,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTime" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

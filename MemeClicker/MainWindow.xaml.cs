@@ -22,15 +22,25 @@ namespace MemeClicker
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer dispatcherTimer = new DispatcherTimer();
-        dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-        dispatcherTimer.Interval = new TimeSpan(0,0,1);
-        dispatcherTimer.Start();
-        
+        public void DispatcherTimerSample()
+        {
+            InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            lblTime.Content = DateTime.Now.ToLongTimeString();
+        }
+
         public MainWindow()
         {
             InitializeComponent();
             SetImage();
+            DispatcherTimerSample();
         }
 
         private void SetImage()
